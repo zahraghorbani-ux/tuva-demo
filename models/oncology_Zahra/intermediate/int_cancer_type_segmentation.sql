@@ -8,6 +8,7 @@ select
 			   when left(lower(primary_cancer_code), 3) = 'c25' then 'Pancreatic Cancer'
 			   when left(lower(primary_cancer_code), 3) = 'c34' then 'Lung Cancer'
 			   when left(lower(primary_cancer_code), 3) = 'c43' then 'Melanoma'
+        	   	   when left(lower(primary_cancer_code), 3) = 'c44' then 'Non-melanoma Skin Cancer'
 			   when left(lower(primary_cancer_code), 3) = 'c50' then 'Breast Cancer'
 			   when left(lower(primary_cancer_code), 3) = 'c53' then 'Cervical Cancer'
 			   when left(lower(primary_cancer_code), 3) = 'c56' then 'Ovarian Cancer'

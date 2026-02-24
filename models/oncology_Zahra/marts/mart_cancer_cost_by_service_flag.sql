@@ -1,7 +1,7 @@
 select 'observation' as service
        , count(*) as encounter_count
        , count(distinct person_id) as patient_count
-       , sum(coalesce(paid_amount,0)) as total_paid_net
+       , sum(coalesce(paid_amount,0)) as total_paid
 from  {{ ref('int_cancer_pop_encounters') }}
 where observation_flag = 1
 

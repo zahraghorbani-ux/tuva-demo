@@ -10,6 +10,7 @@ select
     , m.non_cancer_paid
     , m.pct_paid_cancer_related
     , m.spend_bucket
+    , m.pct_paid_cancer_related_bucket
 from {{ ref('int_cancer_type_segmentation') }} s
-left join {{ ref('int_patient_claim_metrics_enriched') }} 
+left join {{ ref('int_patient_claim_metrics_enriched') }} m
 on s.person_id = m.person_id
